@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Home Through Form</title>
+  <meta name="description" content="Reach the editorial team at Home Through Form. Pitches, questions, and partnerships.">
+  <meta name="keywords" content="contact, interior design journal, architecture magazine, editorial enquiries">
+  <meta name="author" content="Home Through Form Editorial">
+  <link rel="canonical" href="https://www.homethroughform.com/contact.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact — Home Through Form">
+  <meta property="og:description" content="Reach the editorial team. We welcome thoughtful pitches and questions.">
+  <meta property="og:url" content="https://www.homethroughform.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Home Through Form",
+    "url": "https://www.homethroughform.com/contact.html",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Home Through Form",
+      "email": "hello@homethroughform.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "editorial",
+        "email": "editorial@homethroughform.com"
+      }
+    }
+  }
+  </script>
+  <style>
+    /* ---------- RESET & GLOBAL (matches index) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #faf8f6;
+      --ink: #1e1c1a;
+      --ink-light: #3f3b37;
+      --clay: #b7a89a;
+      --accent: #8b6b4d;
+      --border: #e2ded9;
+      --card-bg: #ffffff;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', Times, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: 17px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- HEADER (exactly as index) ---------- */
+    .blog-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      padding: 24px 0 16px;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .logo span {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 24px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--ink-light);
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom-color: var(--accent);
+      color: var(--ink);
+    }
+
+    /* ---------- CONTACT PAGE SPECIFIC ---------- */
+    .contact-hero {
+      text-align: center;
+      padding: 48px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .contact-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-hero .subhead {
+      font-size: 1.15rem;
+      color: var(--ink-light);
+      max-width: 640px;
+      margin: 0 auto;
+      font-family: var(--font-serif);
+      font-style: italic;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      margin-bottom: 64px;
+    }
+
+    @media (max-width: 800px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+    }
+
+    .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 28px;
+      align-items: flex-start;
+    }
+
+    .contact-detail .icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--accent);
+      width: 36px;
+      flex-shrink: 0;
+    }
+
+    .contact-detail .label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-light);
+      margin-bottom: 4px;
+    }
+
+    .contact-detail .value {
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .contact-detail .value a {
+      border-bottom: 1px solid var(--border);
+      transition: border-color 0.2s;
+    }
+
+    .contact-detail .value a:hover {
+      border-bottom-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .contact-note {
+      background: #f5f2ef;
+      border-left: 4px solid var(--accent);
+      padding: 24px 28px;
+      border-radius: 0 4px 4px 0;
+      margin-top: 32px;
+      font-size: 0.95rem;
+      color: var(--ink-light);
+    }
+
+    .contact-note strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- FORM ---------- */
+    .contact-form-wrap {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 40px 36px;
+      border-radius: 4px;
+    }
+
+    .contact-form-wrap h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-wrap .form-sub {
+      color: var(--ink-light);
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 22px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-light);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      background: var(--paper);
+      outline: none;
+      transition: border-color 0.2s;
+      color: var(--ink);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--accent);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238b6b4d' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 2px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+      font-family: var(--font-sans);
+    }
+
+    .submit-btn:hover {
+      background: var(--accent);
+    }
+
+    .form-message {
+      margin-top: 16px;
+      font-size: 0.95rem;
+      padding: 12px 16px;
+      border-radius: 2px;
+      display: none;
+    }
+
+    .form-message.success {
+      display: block;
+      background: #e8f0e8;
+      color: #2d5a2d;
+      border: 1px solid #b8d4b8;
+    }
+
+    .form-message.error {
+      display: block;
+      background: #f5e8e8;
+      color: #7a2d2d;
+      border: 1px solid #d4b8b8;
+    }
+
+    /* ---------- MAP / LOCATION ---------- */
+    .map-section {
+      margin: 64px 0 48px;
+      text-align: center;
+    }
+
+    .map-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .map-section .map-sub {
+      color: var(--ink-light);
+      margin-bottom: 24px;
+      font-size: 0.95rem;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 320px;
+      background: #e6e1dc;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-light);
+      font-style: italic;
+      font-size: 0.95rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.3) contrast(1.05);
+    }
+
+    /* ---------- FAQ MINI ---------- */
+    .contact-faq {
+      margin: 56px 0;
+    }
+
+    .contact-faq h2 {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 1.05rem;
+      font-family: var(--font-serif);
+    }
+
+    .faq-question span {
+      font-size: 1.4rem;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: var(--ink-light);
+      font-size: 0.95rem;
+      padding-right: 20px;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-top: 12px;
+      padding-bottom: 6px;
+    }
+
+    .faq-item.open .faq-question span {
+      transform: rotate(45deg);
+    }
+
+    /* ---------- FOOTER (exactly as index) ---------- */
+    .blog-footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+      margin-top: 64px;
+      background: #f5f2ef;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-grid h5 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+    }
+
+    .footer-grid li {
+      margin-bottom: 8px;
+    }
+
+    .footer-grid a {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- UTILITIES ---------- */
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container header-inner">
+    <div class="logo">Home Through <span>Form</span></div>
+    <div class="tagline">Interior Design &amp; Architecture Journal</div>
+    <nav class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== MAIN ========== -->
+<main class="container">
+
+  <!-- Hero -->
+  <section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p class="subhead">We read every message. Whether you have a story pitch, a question about our editorial process, or just want to say hello — we’re listening.</p>
+  </section>
+
+  <!-- Contact Grid -->
+  <div class="contact-grid">
+    <!-- Left: Info -->
+    <div class="contact-info">
+      <h2>Editorial Desk</h2>
+
+      <div class="contact-detail">
+        <div class="icon">✉</div>
+        <div>
+          <div class="label">General enquiries</div>
+          <div class="value"><a href="mailto:hello@homethroughform.com">hello@homethroughform.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">📝</div>
+        <div>
+          <div class="label">Pitches &amp; submissions</div>
+          <div class="value"><a href="mailto:editorial@homethroughform.com">editorial@homethroughform.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">🤝</div>
+        <div>
+          <div class="label">Partnerships</div>
+          <div class="value"><a href="mailto:partners@homethroughform.com">partners@homethroughform.com</a></div>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">📍</div>
+        <div>
+          <div class="label">Studio</div>
+          <div class="value">Home Through Form Editorial<br>14 Clerkenwell Close<br>London EC1R 0AA<br>United Kingdom</div>
+        </div>
+      </div>
+
+      <div class="contact-note">
+        <strong>Response time:</strong> We aim to reply within 2–3 working days. For urgent press enquiries, please mark your subject line as “URGENT” and we’ll do our best to prioritise it.
+      </div>
+    </div>
+
+    <!-- Right: Form -->
+    <div class="contact-form-wrap">
+      <h2>Send a Message</h2>
+      <p class="form-sub">Fill in the form below and we’ll get back to you as soon as we can.</p>
+
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Alex Rivera" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="Story Pitch">Story Pitch</option>
+            <option value="Editorial Question">Editorial Question</option>
+            <option value="Partnership">Partnership</option>
+            <option value="Press Enquiry">Press Enquiry</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what’s on your mind…" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Map / Location -->
+  <section class="map-section">
+    <h2>Find Us</h2>
+    <p class="map-sub">We’re based in Clerkenwell, London — but we work with writers and designers worldwide.</p>
+    <div class="map-frame">
+      <!-- Using a simple embedded map (OpenStreetMap) as a lightweight placeholder -->
+      <iframe 
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-0.108%2C51.520%2C-0.098%2C51.526&layer=mapnik&marker=51.523%2C-0.103" 
+        allowfullscreen 
+        loading="lazy"
+        title="Map showing Home Through Form studio location in Clerkenwell, London">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="contact-faq">
+    <h2>Before You Write</h2>
+    <div id="contactFaqContainer">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="blog-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:1.5rem; margin-bottom:12px;">Home Through <span>Form</span></div>
+        <p style="font-size:0.85rem; color:var(--ink-light); max-width:280px;">An independent publication exploring the built environment, one room at a time. Founded 2019.</p>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="categories.html">Interior Design</a></li>
+          <li><a href="categories.html">Architecture</a></li>
+          <li><a href="categories.html">Home Design</a></li>
+          <li><a href="categories.html">Materials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Home Through Form. All rights reserved.</span>
+      <span>Made with care for slow reading.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ==================== DATA ====================
+  const contactFaqs = [
+    {
+      q: "How do I pitch a story to Home Through Form?",
+      a: "Send a short pitch (200–300 words) to editorial@homethroughform.com with the subject line “Pitch: [Your Title]”. Include a brief outline, why it fits our audience, and a link to previous writing if available. We respond to all pitches within a week."
+    },
+    {
+      q: "Do you accept unsolicited guest articles?",
+      a: "Yes, occasionally. We prefer to see a pitch first rather than a full draft. If we like the idea, we’ll commission the piece and discuss fees, word count, and deadlines with you."
+    },
+    {
+      q: "Can I republish an article from your site?",
+      a: "If you’d like to republish a short excerpt (up to 150 words) with a link back to the original article, that’s usually fine. For full republishing, please contact us first — we handle these requests case by case."
+    },
+    {
+      q: "How do I get in touch about advertising or sponsorships?",
+      a: "We keep advertising separate from editorial. For partnership enquiries, please email partners@homethroughform.com with details about your brand and what you have in mind."
+    },
+    {
+      q: "I have a question about an article — who should I contact?",
+      a: "For corrections, clarifications, or general feedback on a specific article, email hello@homethroughform.com and mention the article title in the subject line. We read and appreciate all feedback."
+    }
+  ];
+
+  // ==================== RENDER FAQ ====================
+  function renderContactFAQ() {
+    const container = document.getElementById('contactFaqContainer');
+    container.innerHTML = contactFaqs.map((f, i) => `
+      <div class="faq-item" data-index="${i}">
+        <div class="faq-question">
+          ${f.q}
+          <span>+</span>
+        </div>
+        <div class="faq-answer">${f.a}</div>
+      </div>
+    `).join('');
+
+    // Add click handlers
+    container.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', function() {
+        const item = this.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  }
+
+  // ==================== CONTACT FORM ====================
+  function initContactForm() {
+    const form = document.getElementById('contactForm');
+    const messageBox = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Simple validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        messageBox.className = 'form-message error';
+        messageBox.textContent = 'Please fill in all fields before sending.';
+        return;
+      }
+
+      // Basic email pattern check
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        messageBox.className = 'form-message error';
+        messageBox.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      // Simulate successful submission
+      messageBox.className = 'form-message success';
+      messageBox.textContent = 'Thank you, ' + name + '. Your message has been sent — we’ll be in touch soon.';
+
+      // Reset form
+      form.reset();
+
+      // Clear message after 6 seconds
+      setTimeout(() => {
+        messageBox.className = 'form-message';
+        messageBox.textContent = '';
+      }, 6000);
+    });
+  }
+
+  // ==================== INIT ====================
+  document.addEventListener('DOMContentLoaded', () => {
+    renderContactFAQ();
+    initContactForm();
+  });
+</script>
+
+</body>
+</html>

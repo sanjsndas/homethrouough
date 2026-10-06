@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categories — Home Through Form</title>
+  <meta name="description" content="Browse all categories on Home Through Form: interior design, architecture, materials, and more.">
+  <meta name="keywords" content="interior design categories, architecture topics, home design, materials, Home Through Form">
+  <meta name="author" content="Home Through Form Editorial">
+  <link rel="canonical" href="https://www.homethroughform.com/categories.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Categories — Home Through Form">
+  <meta property="og:description" content="Explore our collection of articles by category — interior design, architecture, materials, and more.">
+  <meta property="og:url" content="https://www.homethroughform.com/categories.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Categories",
+    "description": "Browse all categories on Home Through Form.",
+    "url": "https://www.homethroughform.com/categories.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Home Through Form"
+    }
+  }
+  </script>
+  <style>
+    /* ---------- RESET & GLOBAL ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #faf8f6;
+      --ink: #1e1c1a;
+      --ink-light: #3f3b37;
+      --clay: #b7a89a;
+      --accent: #8b6b4d;
+      --border: #e2ded9;
+      --card-bg: #ffffff;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.02);
+      --shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.06);
+      --font-serif: 'Georgia', 'Times New Roman', Times, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: 17px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- HEADER ---------- */
+    .blog-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      padding: 24px 0 16px;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .logo span {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 24px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--ink-light);
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom-color: var(--accent);
+      color: var(--ink);
+    }
+
+    /* ---------- CATEGORIES HERO ---------- */
+    .categories-hero {
+      margin: 48px 0 40px;
+      text-align: center;
+    }
+
+    .categories-hero h1 {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .categories-hero .subhead {
+      font-size: 1.1rem;
+      color: var(--ink-light);
+      max-width: 640px;
+      margin: 0 auto 8px;
+    }
+
+    @media (max-width: 700px) {
+      .categories-hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* ---------- CATEGORIES GRID ---------- */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 0 0 56px;
+    }
+
+    @media (max-width: 1024px) {
+      .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .categories-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    /* ---------- CATEGORY CARD ---------- */
+    .category-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-image {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      background-color: #e8e4e0;
+      transition: opacity 0.3s ease;
+    }
+
+    .category-card:hover .category-image {
+      opacity: 0.92;
+    }
+
+    .category-body {
+      padding: 24px 24px 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .category-body h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .category-body p {
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+
+    .category-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--ink-light);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .category-meta .count {
+      background: #f0ede9;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .category-meta .read-link {
+      color: var(--accent);
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .category-meta .read-link:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    /* ---------- FEATURED CATEGORY BANNER ---------- */
+    .featured-category {
+      margin: 0 0 48px;
+      background: #f5f2ef;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .featured-category .featured-text h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .featured-category .featured-text p {
+      color: var(--ink-light);
+      margin-bottom: 0;
+      max-width: 500px;
+    }
+
+    .featured-category .featured-cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      padding: 12px 28px;
+      border-radius: 2px;
+      white-space: nowrap;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-sans);
+    }
+
+    .featured-category .featured-cta:hover {
+      background: #75583d;
+    }
+
+    @media (max-width: 700px) {
+      .featured-category {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+      }
+      .featured-category .featured-text p {
+        max-width: 100%;
+      }
+    }
+
+    /* ---------- FOOTER ---------- */
+    .blog-footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+      margin-top: 64px;
+      background: #f5f2ef;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-grid h5 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+    }
+
+    .footer-grid li {
+      margin-bottom: 8px;
+    }
+
+    .footer-grid a {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- UTILITY ---------- */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container header-inner">
+    <div class="logo">Home Through <span>Form</span></div>
+    <div class="tagline">Interior Design &amp; Architecture Journal</div>
+    <nav class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html" class="active">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="container">
+
+  <!-- Hero -->
+  <section class="categories-hero">
+    <h1>Categories</h1>
+    <p class="subhead">Browse our archive by subject. Every article is sorted into one of the categories below — from interior design and architecture to materials and home styling.</p>
+  </section>
+
+  <!-- Featured Category Banner -->
+  <section class="featured-category">
+    <div class="featured-text">
+      <h3>Editor's Pick — Interior Design</h3>
+      <p>Our most popular category. Explore timeless principles, contemporary trends, and practical advice for making interior spaces feel like home.</p>
+    </div>
+    <a href="#" class="featured-cta">Browse Interior Design</a>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="categories-grid" aria-label="Article categories">
+
+    <!-- 1. Interior Design -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Warm minimalist living room with natural light"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Interior Design</h3>
+        <p>From colour palettes and lighting to furniture layout and texture — thoughtful interiors that balance beauty and daily life.</p>
+        <div class="category-meta">
+          <span class="count">24 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2. Architecture -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Modern residential architecture with clean lines"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Architecture</h3>
+        <p>Residential architecture, spatial theory, and the built environment — how structures shape the way we live.</p>
+        <div class="category-meta">
+          <span class="count">18 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3. Materials -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Natural wood and stone material samples"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Materials</h3>
+        <p>Wood, stone, concrete, brass, linen — a closer look at the materials that give rooms their character and warmth.</p>
+        <div class="category-meta">
+          <span class="count">12 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4. Home Design -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Cozy home interior with books and plants"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Home Design</h3>
+        <p>Practical guides for making a house feel like home — storage, flow, small spaces, and the details that matter.</p>
+        <div class="category-meta">
+          <span class="count">15 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5. Lighting -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Warm pendant lighting over a dining table"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Lighting</h3>
+        <p>Natural light, layered artificial light, and the fixtures that define atmosphere in every room.</p>
+        <div class="category-meta">
+          <span class="count">9 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6. Sustainability -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Green plants in a sunlit interior space"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Sustainability</h3>
+        <p>Eco-conscious design, passive principles, and the choices that make a home kinder to the planet.</p>
+        <div class="category-meta">
+          <span class="count">7 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. Colour & Texture -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Textured textiles and neutral colour palette"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Colour &amp; Texture</h3>
+        <p>Palettes, patinas, and tactile finishes — how colour and texture work together to shape a room's mood.</p>
+        <div class="category-meta">
+          <span class="count">11 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8. Furniture -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Minimalist wooden furniture in a bright room"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Furniture</h3>
+        <p>Timeless pieces, contemporary makers, and the art of arranging furniture that serves both form and function.</p>
+        <div class="category-meta">
+          <span class="count">14 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9. Small Spaces -->
+    <article class="category-card">
+      <img class="category-image"
+           src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=338&fit=crop&crop=entropy&q=80"
+           alt="Compact apartment interior with smart storage"
+           loading="lazy">
+      <div class="category-body">
+        <h3>Small Spaces</h3>
+        <p>Studio apartments, compact homes, and clever solutions for making the most of every square foot.</p>
+        <div class="category-meta">
+          <span class="count">8 articles</span>
+          <a href="#" class="read-link">Explore →</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="blog-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:1.5rem; margin-bottom:12px;">Home Through <span>Form</span></div>
+        <p style="font-size:0.85rem; color:var(--ink-light); max-width:280px;">An independent publication exploring the built environment, one room at a time. Founded 2019.</p>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="categories.html">Interior Design</a></li>
+          <li><a href="categories.html">Architecture</a></li>
+          <li><a href="categories.html">Home Design</a></li>
+          <li><a href="categories.html">Materials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Home Through Form. All rights reserved.</span>
+      <span>Made with care for slow reading.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

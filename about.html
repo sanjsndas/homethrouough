@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Home Through Form</title>
+  <meta name="description" content="Learn about Home Through Form, an independent interior design and architecture journal. Our mission, editorial approach, and the team behind the publication.">
+  <meta name="keywords" content="about, interior design journal, architecture publication, editorial team, design writing">
+  <meta name="author" content="Home Through Form Editorial">
+  <link rel="canonical" href="https://www.homethroughform.com/about.html">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About — Home Through Form">
+  <meta property="og:description" content="Independent publication exploring residential architecture, interiors, materials, and design thinking.">
+  <meta property="og:url" content="https://www.homethroughform.com/about.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=630&fit=crop">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Home Through Form",
+    "description": "Independent interior design and architecture journal.",
+    "url": "https://www.homethroughform.com/about.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Home Through Form"
+    }
+  }
+  </script>
+  <style>
+    /* ---------- RESET & GLOBAL (same as homepage) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --paper: #faf8f6;
+      --ink: #1e1c1a;
+      --ink-light: #3f3b37;
+      --clay: #b7a89a;
+      --accent: #8b6b4d;
+      --border: #e2ded9;
+      --card-bg: #ffffff;
+      --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.02), 0 6px 18px rgba(0, 0, 0, 0.02);
+      --font-serif: 'Georgia', 'Times New Roman', Times, serif;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      font-size: 17px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3, h4 {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      margin-bottom: 1.4rem;
+    }
+
+    /* ---------- LAYOUT ---------- */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- HEADER (same as homepage) ---------- */
+    .blog-header {
+      border-bottom: 1px solid var(--border);
+      background: var(--paper);
+      padding: 24px 0 16px;
+    }
+
+    .header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .logo {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+
+    .logo span {
+      color: var(--accent);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--ink-light);
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 24px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .main-nav a {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      color: var(--ink-light);
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .main-nav a:hover,
+    .main-nav a.active {
+      border-bottom-color: var(--accent);
+      color: var(--ink);
+    }
+
+    /* ---------- ABOUT HERO ---------- */
+    .about-hero {
+      margin: 48px 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .about-hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .about-hero-content .lead {
+      font-size: 1.15rem;
+      color: var(--ink-light);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .about-hero-image {
+      aspect-ratio: 4/3;
+      background: #e6e1dc;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .about-hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 800px) {
+      .about-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .about-hero-content h1 {
+        font-size: 2.4rem;
+      }
+    }
+
+    /* ---------- CONTENT SECTIONS ---------- */
+    .content-section {
+      max-width: 820px;
+      margin: 0 auto 56px;
+    }
+
+    .content-section h2 {
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .content-section p {
+      font-size: 1.05rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+    }
+
+    .content-section ul {
+      margin: 0 0 24px 24px;
+      color: var(--ink-light);
+    }
+
+    .content-section li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .content-section li strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    /* ---------- PRINCIPLES GRID ---------- */
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin: 48px 0;
+    }
+
+    .principle-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 32px 28px;
+      border-radius: 4px;
+      transition: box-shadow 0.2s;
+    }
+
+    .principle-card:hover {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .principle-card .icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+      color: var(--accent);
+    }
+
+    .principle-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .principle-card p {
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      margin-bottom: 0;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 800px) {
+      .principles-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    /* ---------- TEAM SECTION ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin: 40px 0 56px;
+    }
+
+    .team-member {
+      text-align: center;
+    }
+
+    .team-member img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 16px;
+      border: 3px solid var(--border);
+    }
+
+    .team-member .name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .team-member .role {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .team-member .bio {
+      font-size: 0.9rem;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 700px) {
+      .team-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* ---------- STATS BAR ---------- */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 40px 32px;
+      border-radius: 4px;
+      margin: 48px 0;
+      text-align: center;
+    }
+
+    .stat-item .number {
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .stat-item .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ink-light);
+      font-weight: 500;
+    }
+
+    @media (max-width: 700px) {
+      .stats-bar {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ---------- CTA ---------- */
+    .about-cta {
+      text-align: center;
+      padding: 56px 32px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      margin: 56px 0;
+    }
+
+    .about-cta h2 {
+      margin-bottom: 16px;
+      border: none;
+      padding: 0;
+    }
+
+    .about-cta p {
+      max-width: 520px;
+      margin: 0 auto 28px;
+      color: var(--ink-light);
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--ink);
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 2px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: var(--accent);
+    }
+
+    /* ---------- FOOTER (same as homepage) ---------- */
+    .blog-footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+      margin-top: 64px;
+      background: #f5f2ef;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-grid h5 {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+    }
+
+    .footer-grid li {
+      margin-bottom: 8px;
+    }
+
+    .footer-grid a {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      transition: color 0.2s;
+    }
+
+    .footer-grid a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+      padding-top: 24px;
+      font-size: 0.8rem;
+      color: var(--ink-light);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="blog-header">
+  <div class="container header-inner">
+    <div class="logo">Home Through <span>Form</span></div>
+    <div class="tagline">Interior Design &amp; Architecture Journal</div>
+    <nav class="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="terms.html">Terms Of Privacy</a></li>
+      <li><a href="privacy.html">Privacy Policy</a></li>
+      <li><a href="cookies.html">Cookies Policy</a></li>
+      <li><a href="disclaimer.html">Disclaimer</a></li>
+      <li><a href="categories.html">Categories</a></li>
+    </nav>
+  </div>
+</header>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="container">
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>Shaping space, one story at a time.</h1>
+      <p class="lead">Home Through Form is an independent journal exploring the quiet intelligence of residential architecture and interior design. We write for people who believe the spaces we live in shape the lives we lead.</p>
+      <p style="font-size:0.95rem; color:var(--ink-light);">Founded in 2019, we publish in-depth essays, practical guides, and critical perspectives—free from ads, sponsored content, and passing trends.</p>
+    </div>
+    <div class="about-hero-image">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&h=675&fit=crop" alt="Sunlit minimalist living room with concrete walls and oak flooring">
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats-bar">
+    <div class="stat-item">
+      <div class="number">6+</div>
+      <div class="label">Years publishing</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">200+</div>
+      <div class="label">In-depth articles</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">12k</div>
+      <div class="label">Weekly readers</div>
+    </div>
+    <div class="stat-item">
+      <div class="number">0</div>
+      <div class="label">Sponsored posts</div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="content-section">
+    <h2>Our Mission</h2>
+    <p>We believe that good design writing should be useful, honest, and a pleasure to read. Too much of the conversation around interiors is either superficial trend-chasing or impenetrable theory. Home Through Form occupies a different space: thoughtful, accessible, and grounded in the realities of building and living in a home.</p>
+    <p>Every article we publish is researched, written, and edited by people who have spent time in the field—architects, designers, and writers who care about the details that make a room feel right. We don't chase clicks, and we don't publish press releases. We write for the reader who wants to understand not just <em>what</em> looks good, but <em>why</em> it works.</p>
+  </section>
+
+  <!-- Principles -->
+  <section class="content-section" style="max-width:100%;">
+    <h2 style="text-align:center; border:none; padding:0; margin-bottom:12px;">What We Stand For</h2>
+    <p style="text-align:center; max-width:600px; margin:0 auto 8px; color:var(--ink-light);">Three principles guide everything we publish.</p>
+    <div class="principles-grid">
+      <div class="principle-card">
+        <span class="icon">◈</span>
+        <h3>Independence</h3>
+        <p>We are reader-supported and ad-free. No sponsored articles, no affiliate links, no hidden agendas. Our only obligation is to our readers.</p>
+      </div>
+      <div class="principle-card">
+        <span class="icon">◈</span>
+        <h3>Depth</h3>
+        <p>We take the time to explore subjects properly. Our articles are long-form by design, because the best design writing rewards a slower read.</p>
+      </div>
+      <div class="principle-card">
+        <span class="icon">◈</span>
+        <h3>Craft</h3>
+        <p>We care about materials, joinery, light, and proportion. Our writing reflects a deep respect for the craft of building and the people who do it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="content-section" style="max-width:100%;">
+    <h2 style="text-align:center; border:none; padding:0; margin-bottom:8px;">The Team</h2>
+    <p style="text-align:center; max-width:520px; margin:0 auto 8px; color:var(--ink-light);">A small, independent editorial team based in London and Copenhagen.</p>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=280&h=280&fit=crop&crop=face" alt="Portrait of Elena Marchetti, Editor-in-Chief">
+        <div class="name">Elena Marchetti</div>
+        <div class="role">Editor-in-Chief</div>
+        <div class="bio">Architect and writer. Elena founded Home Through Form after a decade in residential practice. She writes on material culture and domestic space.</div>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=280&h=280&fit=crop&crop=face" alt="Portrait of James Okafor, Senior Editor">
+        <div class="name">James Okafor</div>
+        <div class="role">Senior Editor</div>
+        <div class="bio">James covers architecture and passive design. He has written for several international design titles and teaches part-time at a London school of architecture.</div>
+      </div>
+      <div class="team-member">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=280&h=280&fit=crop&crop=face" alt="Portrait of Sofia Lindqvist, Contributing Editor">
+        <div class="name">Sofia Lindqvist</div>
+        <div class="role">Contributing Editor</div>
+        <div class="bio">Based in Copenhagen, Sofia writes on interiors, lighting, and the quieter aspects of Scandinavian design. She is a trained interior architect.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial Approach -->
+  <section class="content-section">
+    <h2>Our Editorial Approach</h2>
+    <p>We are often asked how we choose what to write about. The answer is simple: we look for subjects that are useful, enduring, and grounded in real-world practice.</p>
+    <ul>
+      <li><strong>No trend-chasing.</strong> We don't write about fads or flavours of the month. If a subject won't be relevant in five years, we probably won't cover it.</li>
+      <li><strong>No sponsored content.</strong> We have never accepted payment for coverage, and we never will. Our recommendations are our own.</li>
+      <li><strong>Primary research.</strong> Where possible, we speak to architects, makers, and manufacturers directly. We visit buildings and handle materials.</li>
+      <li><strong>Corrections and transparency.</strong> If we get something wrong, we correct it openly. We believe trust is earned through honesty, not authority.</li>
+    </ul>
+    <p>If you have a story idea, a correction, or simply want to say hello, we'd love to hear from you. Visit our <a href="contact.html" style="color:var(--accent); border-bottom:1px solid var(--accent);">contact page</a> to get in touch.</p>
+  </section>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <h2>Read with us.</h2>
+    <p>Join thousands of readers who receive our weekly edit every Thursday. No noise, just architecture and interiors worth your time.</p>
+    <a href="index.html#newsletter" class="btn">Subscribe to The Weekly Edit</a>
+  </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="blog-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="font-size:1.5rem; margin-bottom:12px;">Home Through <span>Form</span></div>
+        <p style="font-size:0.85rem; color:var(--ink-light); max-width:280px;">An independent publication exploring the built environment, one room at a time. Founded 2019.</p>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="index.html">Interior Design</a></li>
+          <li><a href="index.html">Architecture</a></li>
+          <li><a href="index.html">Home Design</a></li>
+          <li><a href="index.html">Materials</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>About</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="#">Editorial Policy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Follow</h5>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Home Through Form. All rights reserved.</span>
+      <span>Made with care for slow reading.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
